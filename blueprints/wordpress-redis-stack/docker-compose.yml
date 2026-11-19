@@ -1,6 +1,6 @@
 services:
   nginx:
-    image: ghcr.io/itsmereal/dokploy-wp-nginx:latest
+    image: ghcr.io/itsmereal/dokploy-wp-nginx:latest@sha256:157eabe9c5c21ba8eab5d055e9ddfa414c7959b4541a7dda6ccd9a58ba9e70d3
     ports:
       - "80"
     environment:
@@ -22,7 +22,7 @@ services:
     restart: unless-stopped
 
   wordpress:
-    image: ghcr.io/itsmereal/dokploy-wp-wordpress:security-20261021
+    image: ghcr.io/itsmereal/dokploy-wp-wordpress:security-20261021@sha256:e5df1aa75d7dac52f715dbe30631061c9e9a31d327057f5399bb3a132bd6ab84
     environment:
       - WORDPRESS_DB_HOST=db
       - WORDPRESS_DB_USER=wordpress
@@ -59,7 +59,7 @@ services:
     restart: unless-stopped
 
   db:
-    image: mariadb:10.6
+    image: mariadb:10.6@sha256:c7d726a1c0d29e486a1ab4ef0c76c75431a11428e76c50e99ba32106cea04114
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE=wordpress
@@ -78,7 +78,7 @@ services:
     restart: unless-stopped
 
   redis:
-    image: redis:alpine
+    image: redis:alpine@sha256:7958cfbb9d152f87dadfbc89f1b0b15938f0b81ff8982feb327476f4911935c3
     command: redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru
     volumes:
       - redis_data:/data
@@ -93,7 +93,7 @@ services:
     restart: unless-stopped
 
   plugin-installer:
-    image: ghcr.io/itsmereal/dokploy-wp-plugin-installer:latest
+    image: ghcr.io/itsmereal/dokploy-wp-plugin-installer:latest@sha256:f3ce1051565d193b46cd25ea81de695fba1f518e4c2443118c96006ca9c1c24b
     volumes:
       - wordpress_data:/var/www/html
     depends_on:
@@ -103,7 +103,7 @@ services:
       - internal
 
   phpmyadmin:
-    image: ghcr.io/itsmereal/dokploy-wp-phpmyadmin:security-20261021
+    image: ghcr.io/itsmereal/dokploy-wp-phpmyadmin:security-20261021@sha256:697e758e78ca999968dde6a96a49a51aa957fb29db6c9fc65a8a44eb1fa8d788
     environment:
       - PMA_HOST=db
       - PMA_PORT=3306
