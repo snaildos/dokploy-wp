@@ -2,6 +2,8 @@
 
 Production-ready WordPress deployment stack optimized for Dokploy with Redis caching, Nginx, and management tools.
 
+Fork of [https://github.com/itsmereal/dokploy-wp](https://github.com/itsmereal/dokploy-wp); with security updates focused for internal SnailDOS hosting
+
 ## Stack Components
 
 | Service | Description |
