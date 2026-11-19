@@ -3,15 +3,20 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
-    "docker:pinDigests"
+    "docker:pinDigests",
+    "security:only-security-updates"
   ],
-  "docker": {
-    "enabled": true
-  },
   "schedule": [
-    "before 6am every weekday"
+    "* 0-23 * * *"
   ],
-  "timezone": "Australia/Perth",
+  "timezone": "Australia/Sydney",
+  "updateNotScheduled": false,
   "prConcurrentLimit": 10,
-  "prHourlyLimit": 5
+  "prHourlyLimit": 5,
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": ["security"],
+    "prConcurrentLimit": 10,
+    "vulnerabilityFixStrategy": "lowest"
+  }
 }
