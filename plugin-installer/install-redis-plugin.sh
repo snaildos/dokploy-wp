@@ -26,6 +26,7 @@ echo "WordPress is ready!"
 
 # Check if Redis Object Cache plugin is already installed
 if [ -d "${PLUGINS_PATH}/redis-cache" ]; then
+    chown -R www-data:www-data "${PLUGINS_PATH}/redis-cache"
     echo "Redis Object Cache plugin is already installed. Skipping."
     exit 0
 fi
