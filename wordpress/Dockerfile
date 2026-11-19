@@ -1,4 +1,4 @@
-FROM wordpress:php8.3-fpm
+FROM wordpress:php8.3-fpm@sha256:58a0b512f34297cee709a4ae41defc3ac56902f36247b64ef171fd57b0a0e013
 
 COPY php-security/ensure-patched-php.sh /usr/local/bin/ensure-patched-php
 RUN chmod +x /usr/local/bin/ensure-patched-php \
