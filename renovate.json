@@ -1,0 +1,17 @@
+
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "docker:pinDigests"
+  ],
+  "docker": {
+    "enabled": true
+  },
+  "schedule": [
+    "before 6am every weekday"
+  ],
+  "timezone": "Australia/Perth",
+  "prConcurrentLimit": 10,
+  "prHourlyLimit": 5
+}
