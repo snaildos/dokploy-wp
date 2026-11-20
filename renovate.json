@@ -3,8 +3,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
-    "docker:pinDigests",
-    "security:only-security-updates"
+    "docker:pinDigests"
   ],
   "schedule": [
     "* 0-23 * * *"
@@ -15,7 +14,6 @@
   "prHourlyLimit": 5,
   "vulnerabilityAlerts": {
     "enabled": true,
-    "labels": ["security"],
     "prConcurrentLimit": 10,
     "vulnerabilityFixStrategy": "lowest"
   }
