@@ -1,6 +1,6 @@
 services:
   nginx:
-    image: ghcr.io/itsmereal/dokploy-wp-nginx:latest@sha256:157eabe9c5c21ba8eab5d055e9ddfa414c7959b4541a7dda6ccd9a58ba9e70d3
+    image: ghcr.io/itsmereal/dokploy-wp-nginx:latest@sha256:a83008bdca862726a9e25a45d0a21585d7ffa18b8861575866711af0efb61d8b
     ports:
       - "80"
     environment:
