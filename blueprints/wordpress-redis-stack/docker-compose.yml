@@ -93,7 +93,7 @@ services:
     restart: unless-stopped
 
   plugin-installer:
-    image: ghcr.io/itsmereal/dokploy-wp-plugin-installer:latest@sha256:f3ce1051565d193b46cd25ea81de695fba1f518e4c2443118c96006ca9c1c24b
+    image: ghcr.io/itsmereal/dokploy-wp-plugin-installer:latest@sha256:bbf0eed80ffebe057996a5b7a9ea6b26f95e8e379634deb0378924f5f118838a
     volumes:
       - wordpress_data:/var/www/html
     depends_on:
