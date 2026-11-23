@@ -103,7 +103,7 @@ services:
       - internal
 
   phpmyadmin:
-    image: ghcr.io/itsmereal/dokploy-wp-phpmyadmin:security-20261021@sha256:697e758e78ca999968dde6a96a49a51aa957fb29db6c9fc65a8a44eb1fa8d788
+    image: ghcr.io/itsmereal/dokploy-wp-phpmyadmin:security-20261021@sha256:081a5425f8da27e226bcf4e67cc151915bea82bb4fa9a10c4e189b5974f089d5
     environment:
       - PMA_HOST=db
       - PMA_PORT=3306
