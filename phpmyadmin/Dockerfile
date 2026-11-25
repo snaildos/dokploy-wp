@@ -1,4 +1,4 @@
-FROM phpmyadmin:latest@sha256:7d0b1d9826aa1345a4cab1feded7b19b5f8b1d90579b3180fbc1353157e35c7b
+FROM phpmyadmin:latest@sha256:64293e1f91d6509e9530d51059b1d45a31d3e4b38ead27cc9648b915b061ba2c
 
 RUN apt-get update && apt-get upgrade -y && rm -rf /var/lib/apt/lists/*
 
