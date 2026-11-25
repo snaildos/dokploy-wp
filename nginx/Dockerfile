@@ -1,4 +1,4 @@
-FROM nginx:alpine@sha256:fb4658584bd9a916ffb6f6e365f97c25cfdb2923801f551ea08356e695f14ff7
+FROM nginx:alpine@sha256:7fc0fb4af7bf006aeb31aea88069976060f8f0a0a86b667126742cc17f4e31ae
 
 # Install envsubst (part of gettext) and wget for healthcheck
 RUN apk upgrade --no-cache && apk add --no-cache gettext wget
